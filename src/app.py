@@ -15,6 +15,7 @@ class Final():
 
     DIR = '/home/jgonzalez/dev/ditella-neurociencia-final/data/'
     FILENAME = 'data_Study2.csv'
+    SAVE_PLOT_AS_FILE = True
 
     
     def __init__(self):
@@ -75,6 +76,77 @@ class Final():
         self.calculate_statistical('education', self.education)
         self.calculate_statistical('party', self.party)
 
+        # sexo
+        labels = ['mujer', 'hombre']
+        sizes = [0, 0]
+
+        for element in self.sex:
+            if element == 1:
+                sizes[0] += 1
+            else:
+                sizes[1] += 1
+
+        self.plot_charts('sexo', labels, sizes)
+
+        # etnia
+        labels = ['black', 'white', 'hispanic', 'asian', 'other']
+        sizes = [0, 0, 0, 0, 0]
+
+        for element in self.ethnicity:
+            if element == 0:
+                sizes[0] += 1
+            elif element == 1:
+                sizes[1] += 1
+            elif element == 2:
+                sizes[2] += 1
+            elif element == 3:
+                sizes[3] += 1
+            else:
+                sizes[4] += 1
+
+        self.plot_charts('etnia', labels, sizes)
+
+        # partido politico
+        labels = ['Trump', 'Biden', 'None']
+        sizes = [0, 0, 0]
+
+        for element in self.party:
+            if element == 0:
+                sizes[0] += 1
+            elif element == 1:
+                sizes[1] += 1
+            else:
+                sizes[2] += 1
+
+        self.plot_charts('partido', labels, sizes)
+
+        # educacion
+        labels = ['Secundaria Incompleta', 'Universidad incompleta', 'Universidad completa o +']
+        sizes = [0, 0, 0]
+
+        for element in self.education:
+            if element == 0:
+                sizes[0] += 1
+            elif element == 1:
+                sizes[1] += 1
+            else:
+                sizes[2] += 1
+
+        self.plot_charts('educacion', labels, sizes)
+
+
+    def plot_charts(self, subject, labels, sizes):
+        fig1, ax1 = plt.subplots()
+        ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
+                shadow=True, startangle=90)
+        ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+        
+        if self.SAVE_PLOT_AS_FILE:
+            image_name = f'../results/{subject}.png'
+            plt.savefig(image_name)
+        
+        plt.show()       
+
 
     def calculate_statistical(self, var, array):
         if var not in self.results:
@@ -113,11 +185,12 @@ class Final():
 if __name__ == '__main__':
     app = Final()
     # print(app)
-    app.get_data()
+    # app.get_data()
     print(app.get_age())
     print(app.get_sex())
     print(app.get_ethnicity())
     print(app.get_education())
     print(app.get_party())
     print(app.get_results())
+
     

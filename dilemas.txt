@@ -27,7 +27,6 @@ Ejemplo en el paper de Navajas es que las primeras tres preguntas apuntan a util
 y las ultimas dos a instrumental harm, y como hay personas que estan a favor de ambas y otras utilitaristas que estan ok con unas y no con estas,
 esto valida el modelo dual que explica este comportamiento
 
-El dataset tiene variables de personalidad! las 
 -------------------------------------
 
 In this paper, we study the reasoning mechanisms used by
@@ -54,15 +53,6 @@ underlying moral reactions to the COVID-19 crisis.
 utilitarista: minimiza daño (ej: menos personas mueren en tranvia)
 deontologia: Deontology is a different normative theory that proposes to judge the morality
 of a decision based on the action itself rather than on their consequences.
-
-
-factores de la personalidad:
-- openness
-- neuroticism
-- agreeableness
-- extraversion
-- 	conscientiousness
-
 
 --------------------------------------------------
 The first three dilemmas pose a tension between public health and other values of wellbeing:
@@ -119,7 +109,7 @@ Imagine this situation happened and you had to decide what to do, how much distr
 
 ----------------------------------
 
-Estas son preguntas que apuntan a la personalidad (OCEAN)
+Preguntas para perfilado de utilitarismo de las personas 
 
 Dilema 7 (OUS-IH):
 It is morally right to harm an innocent person if harming her is a necessary mean to helping several 4 innocent people. (tranvia)
