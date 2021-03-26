@@ -1,0 +1,152 @@
+Notas:
+La filosofia moral plantea dos maneras estereotipadaas de razonar ante cada una de estas situaciones
+
+Utilitarismo/Consecuencialismo: Decisiones deben ser juzgadas por el bienestar general que producen. Evalua las consecuencias globales de las acciones
+pero sin evaluar a las acciones en sí misma.
+
+Deontología: Es una teroría moral que sugiere que las acciones deben ser juzgadas por si mismas, sin importar
+las consecuencias o el bienestar global que las mismas generen
+
+Ante dilemas personas: tendencia deontologica
+Ante dilemas impersonales: decisiones utilitarias
+
+
+Sistema 1: Intuitivo, rapido, emocional (personales/deontologico)
+Sistema 2: Racional (impersonales/utilitarias)
+
+Teoria del procesamiento dual de la moral de Greene (Neuron 2004)
+distinción entre decisiones utilitarias y decisiones deontologicas. Todos
+queremos tomar decisiones utilitarias pero las emociones no nos dejan, a veces,
+tomar estas decisiones. En dilemas impersonales no hay conflicto pero en personales si
+
+Vista dual de la moral
+daño instrumental   |
+beneficio imparcial | -----> dos dimensiones utilitaristas que pueden analizarse
+
+Ejemplo en el paper de Navajas es que las primeras tres preguntas apuntan a utilitarismo que tiene que ver con impartial beneficence
+y las ultimas dos a instrumental harm, y como hay personas que estan a favor de ambas y otras utilitaristas que estan ok con unas y no con estas,
+esto valida el modelo dual que explica este comportamiento
+
+El dataset tiene variables de personalidad! las 
+-------------------------------------
+
+In this paper, we study the reasoning mechanisms used by
+individuals when they judge the acceptability of a set of controversial actions: relaxing data
+privacy standards to allow public control of the pandemic, forbidding public gatherings until
+the pandemic is over, denouncing a friend who violated COVID-19 protocols, prioritizing
+younger over older patients when medical resources are scarce, and reducing animal rights
+to accelerate vaccine development.
+
+
+A formal analysis of the intrinsic correlations between responses to different
+dilemmas suggests that *people consistently used two reasoning processes*: 
+
+- one that maximizes human life expectancy 
+- one that cares about the health of all sentient lives in an equitable manner. 
+
+The extent to which people employ these considerations varies across
+individuals but can be robustly predicted by a standardized moral reasoning scale. 
+
+Moreover, we show that people’s reliance on these two arguments *correlates with the severity of the
+pandemic in their country*. Altogether, these findings elucidate the reasoning processes
+underlying moral reactions to the COVID-19 crisis.
+
+utilitarista: minimiza daño (ej: menos personas mueren en tranvia)
+deontologia: Deontology is a different normative theory that proposes to judge the morality
+of a decision based on the action itself rather than on their consequences.
+
+
+factores de la personalidad:
+- openness
+- neuroticism
+- agreeableness
+- extraversion
+- 	conscientiousness
+
+
+--------------------------------------------------
+The first three dilemmas pose a tension between public health and other values of wellbeing:
+
+
+Dilema 1:
+A runaway train is speeding down the tracks towards five people who will be killed if the train continues on its present course. You are standing next to the tracks, but you are too far away to warn them. Next to you there is someone else and, if this person falls to the tracks, the train will derail.If you decide to push this person onto the tracks, that will provoke the death of this person, but the train will not continue its course and you will have saved the lives of five people.Pushing the person onto the tracks is:
+
+How certain are you about your answer?
+
+How certain are you about your answer?
+
+
+Dilema 2:
+Suppose we can go back in time before the pandemic had exploded world-wide. A new technology allows governments to automatically collect personal information about our movements and the people we have physical contact with. Governments can also have access to biometric data such as our temperature and respiratory frequency. This allows identifying people at risk of having COVID-19 and limiting the propagation of the virus by selecting who is quarantined and who is notThe government of the country where you live evaluates a plan to use this technology but understands that it does not protect the personal data of its citizens and decides not to approve it. Not approving the plan is:
+
+How certain are you about your answer?
+
+Imagine this situation happened and you had to decide what to do, how much distress would you feel?
+
+
+Dilema 3:
+The near future of our societies and how we will get out of the periods of strict confinement is unclear, among 4 things because there are great unknowns in the mutation rates of the virus, its seasonal variance, the probability of being reinfected, and the degree of immunity that we will reach. Societies are likely to create a compromise between minimizing health risks and preserving our desired lifestyles.Knowing this, a government decides to forbid all kinds of public gatherings (including restaurants, bars, concerts, cinemas and theatres) until a vaccine is found. The government's decision is:
+
+How certain are you about your answer?
+
+Imagine this situation happened and you had to decide what to do, how much distress would you feel?
+
+
+The remaining two dilemmas ask whether 4th one should give priority to some lives above others in public health
+
+Dilema 4 (real life trolley dilemma):
+One of your close friends has high fever and was recently tested for COVID-19. The health authorities of your country have dictated that he should remain at home, in complete isolation, until the results are back. During this period, your friend went once to the supermarket to buy food. If the authorities find out about this, your friend might face prison and have a criminal record.You still do not know whether he will test positive for COVID-19 but decided to call the police and tell the authorities about this situation. Telling the authorities about this situation is:
+
+How certain are you about your answer?
+
+Imagine this situation happened and you had to decide what to do, how much distress would you feel?
+
+
+Dilema 5:
+Ventilators have become in many countries a limited resource and a medical bottleneck due to the COVID-19 outbreak. An ethics committee (EC) is deciding how to set priorities on who will be treated and who will not. One option is to treat people on a first-come first-serve basis. A second argument is made that significantly younger patients (under 30 years old) should be prioritized and that, even when chances of recovery are considered to be the same, the younger patient should be treated before older patients.The EC opts to implement the second option. Implementing the second option is:
+
+How certain are you about your answer?
+
+Imagine this situation happened and you had to decide what to do, how much distress would you feel?
+
+
+Dilema 6:
+A laboratory has all the necessary resources to develop a vaccine against coronavirus in only 4 weeks. However, to do so, the researchers need to violate ethical guidelines for the use of animals in scientific research. Particularly, the experiments will cause excessive stress and pain to hundreds of rodents.The laboratory requests an exceptional permission to perform these experiments, but the government decides to reject this request. The decision made by the government is:
+
+How certain are you about your answer?
+
+Imagine this situation happened and you had to decide what to do, how much distress would you feel?
+
+----------------------------------
+
+Estas son preguntas que apuntan a la personalidad (OCEAN)
+
+Dilema 7 (OUS-IH):
+It is morally right to harm an innocent person if harming her is a necessary mean to helping several 4 innocent people. (tranvia)
+
+Dilema 8 (OUS-IH):
+It is permissible to torture an innocent person if this would be necessary to provide information to prevent a bomb going off that would kill hundreds of people. (guerra)
+
+Dilema 9 (OUS-IH):
+Sometimes it is morally necessary for innocent people to die as collateral damage—if more people are saved overall.
+
+Dilema 10 (OUS-IB):
+It is morally wrong to keep money that one doesn’t really need if one can donate it to causes that provide effective help to those who would benefit a great deal.
+
+Dilema 11 (OUS-IB):
+If the only way to save a person’s life during an emergency is to sacrifice one’s own leg, then one is morally required to make this sacrifice.
+
+Dilema 12 (OUS-IB):
+It is just as wrong to fail to help someone as it is to actively harm them yourself.
+
+Dilema 13 (OUS-IB):
+From a moral point of view, we should feel obliged to give one of our kidneys to a person with kidney failure since we don’t need two kidneys to survive, but really only one to be healthy.
+
+Dilema 14 (OUS-IH):
+If the only way to ensure the overall well-being and happiness of the people is through the use of political oppression for a short, limited period, then political oppression should be used.
+
+Dilema 15 (OUS-IB):
+If the only way to ensure the overall well-being and happiness of the people is through the use of political oppression for a short, limited period, then political oppression should be used.
+
+
+
