@@ -9,10 +9,6 @@ from sklearn import linear_model
 import statsmodels.api as sm
 
 
-# TODO: Histogramas para las 5 variables a estudiar
-# TODO: Separar informacion por dilema (5 en total con 3 respuestas cada uno)
-# TODO: Calcular perfiles de personas segun indice oxford
-
 class Final():
     '''
     Clase que modela la resolución del final de la materia Neurociencia y Toma de Decisiones
@@ -79,6 +75,9 @@ class Final():
 
 
     def data_analysis(self):
+        '''
+        Se analizan los datos que fueron preprocesados en estructuras de datos dentro de la clase
+        '''
         self.calculate_statistical('age', self.age)
         self.calculate_statistical('sex', self.sex)
         self.calculate_statistical('ethnicity', self.ethnicity)
@@ -148,6 +147,9 @@ class Final():
         self.linear_regression()
 
     def plot_charts(self, subject, labels, sizes):
+        '''
+        Impresion de pie charts
+        '''
         fig1, ax1 = plt.subplots()
         ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
                 shadow=True, startangle=90)
@@ -161,6 +163,9 @@ class Final():
 
 
     def calculate_statistical(self, var, array):
+        '''
+        Calculo de media de vectores previa conversión a arrays de numpy
+        '''
         if var not in self.results:
             self.results[var] = {}
             self.results[var]['mean'] = 0
@@ -171,6 +176,9 @@ class Final():
 
 
     def linear_regression(self):
+        '''
+        Calculo de regresion lineal multi variables respecto de OUS
+        '''
         data = {
             'sex': self.sex,
             'education': self.education,
@@ -190,11 +198,6 @@ class Final():
 
         print('Intercept: \n', regr.intercept_)
         print('Coefficients: \n', regr.coef_)
-
-        # prediction with sklearn
-        # New_Interest_Rate = 2.75
-        # New_Unemployment_Rate = 5.3
-        # print ('Predicted Stock Index Price: \n', regr.predict([[New_Interest_Rate ,New_Unemployment_Rate]]))
 
         # with statsmodels
         X = sm.add_constant(X) # adding a constant
