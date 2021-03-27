@@ -1,8 +1,13 @@
 import csv
 import numpy as np
+from statistics import mean
 from scipy import stats
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
+import pandas as pd
+from sklearn import linear_model
+import statsmodels.api as sm
+
 
 # TODO: Histogramas para las 5 variables a estudiar
 # TODO: Separar informacion por dilema (5 en total con 3 respuestas cada uno)
@@ -48,12 +53,16 @@ class Final():
                     data['rows'].append(row)
                     line_count += 1
 
-            self.age = np.array([ int(x[29]) for x in data['rows'] ])
-            self.sex = np.array([ int(x[30]) for x in data['rows'] ])
-            self.ethnicity = np.array([ int(x[31]) for x in data['rows'] ])
-            self.education = np.array([ int(x[32]) for x in data['rows'] ])
-            self.party = np.array([ int(x[33]) for x in data['rows'] ])
-            
+            self.age = [ int(x[29]) for x in data['rows'] ]
+            self.sex = [ int(x[30]) for x in data['rows'] ]
+            self.ethnicity = [ int(x[31]) for x in data['rows'] ]
+            self.education = [ int(x[32]) for x in data['rows'] ]
+            self.party = [ int(x[33]) for x in data['rows'] ]
+            # Se normaliza OUS a un valor entre [1-7]
+            self.oxford = [mean([int(x[19]) , int(x[20]) , int(x[21]) ,
+                                    int(x[22]) , int(x[23]) , int(x[24]) ,
+                                    int(x[25]) , int(x[26]) , int(x[27])]) for x in data['rows']]
+
             return data
 
 
@@ -76,6 +85,7 @@ class Final():
         self.calculate_statistical('education', self.education)
         self.calculate_statistical('party', self.party)
 
+        print('Generating charts....')
         # sexo
         labels = ['mujer', 'hombre']
         sizes = [0, 0]
@@ -134,6 +144,8 @@ class Final():
 
         self.plot_charts('educacion', labels, sizes)
 
+        print('Calculating linear regression....')
+        self.linear_regression()
 
     def plot_charts(self, subject, labels, sizes):
         fig1, ax1 = plt.subplots()
@@ -154,8 +166,47 @@ class Final():
             self.results[var]['mean'] = 0
             self.results[var]['std'] = 0
 
-        self.results[var]['mean'] = np.mean(array)
-        self.results[var]['std'] = np.std(array)
+        self.results[var]['mean'] = np.mean(np.array(array))
+        self.results[var]['std'] = np.std(np.array(array))
+
+
+    def linear_regression(self):
+        data = {
+            'sex': self.sex,
+            'education': self.education,
+            'ethnicity': self.ethnicity,
+            'age': self.age,
+            'ous': self.oxford
+        }
+
+        df = pd.DataFrame(data ,columns=['sex','education','ethnicity','age','ous'])
+
+        X = df[['sex','education','ethnicity','age']] # 4 variables para la regresion
+        Y = df['ous']
+        
+        # with sklearn
+        regr = linear_model.LinearRegression()
+        regr.fit(X, Y)
+
+        print('Intercept: \n', regr.intercept_)
+        print('Coefficients: \n', regr.coef_)
+
+        # prediction with sklearn
+        # New_Interest_Rate = 2.75
+        # New_Unemployment_Rate = 5.3
+        # print ('Predicted Stock Index Price: \n', regr.predict([[New_Interest_Rate ,New_Unemployment_Rate]]))
+
+        # with statsmodels
+        X = sm.add_constant(X) # adding a constant
+        
+        model = sm.OLS(Y, X).fit()
+        predictions = model.predict(X) 
+        
+        print_model = model.summary()
+        print(print_model)
+
+    def get_oxford(self):
+        return self.oxford
 
 
     def get_age(self):
@@ -186,11 +237,13 @@ if __name__ == '__main__':
     app = Final()
     # print(app)
     # app.get_data()
-    print(app.get_age())
-    print(app.get_sex())
-    print(app.get_ethnicity())
-    print(app.get_education())
-    print(app.get_party())
-    print(app.get_results())
+    print(f'Age: {app.get_age()}')
+    print(f'Sex: {app.get_sex()}')
+    print(f'Ethnic: {app.get_ethnicity()}')
+    print(f'Education: {app.get_education()}')
+    print(f'Party: {app.get_party()}')
+    print(f'OUS: {app.get_oxford()}')
+    print(f'Results: {app.get_results()}')
+    #app.linear_regression()
 
     
