@@ -184,12 +184,13 @@ class Final():
             'education': self.education,
             'ethnicity': self.ethnicity,
             'age': self.age,
+            'party': self.party,
             'ous': self.oxford
         }
 
-        df = pd.DataFrame(data ,columns=['sex','education','ethnicity','age','ous'])
+        df = pd.DataFrame(data ,columns=['sex','education','ethnicity','age', 'party','ous'])
 
-        X = df[['sex','education','ethnicity','age']] # 4 variables para la regresion
+        X = df[['sex','education','ethnicity','age', 'party']] # 5 variables para la regresion
         Y = df['ous']
         
         # with sklearn
